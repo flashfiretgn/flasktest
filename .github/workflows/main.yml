@@ -30,7 +30,7 @@ jobs:
         run: zip -r ${{ env.deploy }} ./ -x *.git*
       
       - name: testenv
-        run: echo "first key is ${{ secrets.MY_AWS_KEY }} Second key is ${{ secrets.MY_AWS_SECRET_KEY }"
+        run: echo "region is ${{ env.awsregion }"
       
       - name: aws_cred
         uses: aws-actions/configure-aws-credentials@v1
