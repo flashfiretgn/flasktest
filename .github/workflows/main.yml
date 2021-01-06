@@ -30,7 +30,7 @@ jobs:
         run: zip -r ${{ env.deploy }} ./ -x *.git*
       
       - name: testenv
-        run: echo "region is ${{ env.awsregion }"
+        run: echo "region is ${{ env.awsregion }}"
       
       - name: aws_cred
         uses: aws-actions/configure-aws-credentials@v1
