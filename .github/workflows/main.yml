@@ -63,4 +63,4 @@ jobs:
              --source-bundle S3Bucket="${{env.bucket}}",S3Key="${{env.deploy}}"
               
         - name: deploy eb
-          run:  aws elasticbeanstalk update-environment --environment-name "Myflash-env" --version-label "${{github.sha}}"
+          run:  aws elasticbeanstalk update-environment --environment-name "Myflask-env" --version-label "${{github.sha}}"
