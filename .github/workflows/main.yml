@@ -41,7 +41,7 @@ jobs:
       - name: copy2s3
         run: aws s3 cp ${{ env.deploy }} s3://${{ env.bucket }}/
     
-    mygitjob2:
+  mygitjob2:
     
       runs-on: ubuntu-latest
       needs: mygitjob1
