@@ -51,9 +51,9 @@ jobs:
         - name: aws_cred
           uses: aws-actions/configure-aws-credentials@v1
           with:
-          aws-access-key-id: ${{ secrets.MY_AWS_KEY }}
-          aws-secret-access-key: ${{ secrets.MY_AWS_SECRET_KEY }}     
-          aws-region: ${{ env.awsregion }}
+            aws-access-key-id: ${{ secrets.MY_AWS_KEY }}
+            aws-secret-access-key: ${{ secrets.MY_AWS_SECRET_KEY }}     
+            aws-region: ${{ env.awsregion }}
       
         - name: create elasticbean
           run: |
