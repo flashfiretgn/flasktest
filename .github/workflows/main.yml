@@ -60,7 +60,7 @@ jobs:
             aws elasticbeanstalk create-application-version \
             --application-name ${{env.eb_appname}} \
              --version-label "${{github.sha}}" \
-             --source-bundle S3Bucket="${{env.bucket}}",S3Key="${env.deploy}}"
+             --source-bundle S3Bucket="${{env.bucket}}",S3Key="${{env.deploy}}"
               
         - name: deploy eb
           run:  aws elasticbeanstalk update-environment -environment-name Myflash-env --version-label "${{github.sha}}"
